@@ -12,8 +12,6 @@ const NftDetail = () => {
 
     const {contractAddress, tokenId} = useParams();
 
-
-
     useEffect(() => {
         dispatch(nftDetailFetch())
         getNftDetails(contractAddress, tokenId)
@@ -27,7 +25,7 @@ const NftDetail = () => {
         <div>
             {
                 dtls.loading ? (
-                    <BeatLoader/>
+                    <BeatLoader color="#5142fc"/>
                 ) : (
                     <Details dtls={dtls}/>
                 )
