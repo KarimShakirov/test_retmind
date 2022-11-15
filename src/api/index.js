@@ -7,10 +7,11 @@ const axiosInstance = axios.create({
   },
 });
 
-export const getNfts = () => {
-  const url = endpoints.getNfts;
+export const getNft = async () => {
+  const url = endpoints.getNft;
 
-  return axiosInstance.get(url);
+  const response = await axiosInstance.get(url);
+  return response.data;
 };
 
 export const getNftDetails = (contract_address, token_id) => {
@@ -18,3 +19,10 @@ export const getNftDetails = (contract_address, token_id) => {
 
   return axiosInstance.get(url);
 };
+
+export const getNftOffset = async (limit, offset) => {
+  const url = endpoints.getNftOffset(limit, offset)
+
+  const response = await axiosInstance.get(url)
+  return response.data;
+}

@@ -5,7 +5,6 @@ import infoImg from "../../../assets/img/e5fc935b60035305099554810357012a.webp";
 import './Detail.css';
 
 const Details = ({dtls}) => {
-    console.log("DAAATA", dtls)
     return (
         <section className="details__section">
             <Container>
